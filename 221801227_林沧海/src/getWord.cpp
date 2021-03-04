@@ -53,3 +53,13 @@ map<string, int> fun::getWordTest(string str) {
     }
     return mymap;
 }
+
+
+//输出单词及其数量
+void fun::showWord() {
+    map<string, int>::iterator strmap_iter2 = mymap.begin();
+    for (;strmap_iter2 != mymap.end();strmap_iter2++)
+    {
+        cout << strmap_iter2->first << ' ' << strmap_iter2->second << endl;
+    }
+}
