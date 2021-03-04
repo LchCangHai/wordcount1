@@ -1,0 +1,11 @@
+/Debug/
+/*.sln
+/*.vcxproj
+/*.filters
+/*.user
+/.vs
+/*.log
+/*.obj
+/*.recipe
+/*.pdb
+/*.tlog
