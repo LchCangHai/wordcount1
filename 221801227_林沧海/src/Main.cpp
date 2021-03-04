@@ -41,6 +41,9 @@ int main() {
     string temp1 = "行数为：" + to_string(lineCnt) + "\n";
     string temp2 = "字符数为：" + to_string(charCnt) + "\n";
     string temp3 = "单词数为：" + to_string(wordCnt) + "\n";
+    cout << "行数为：" << lineCnt << endl;
+    cout << "字符数为：" << charCnt << endl;
+    cout << "单词数为：" << wordCnt << endl;
     // 前3行
     outfile << temp1 << temp2 << temp3;
     vector<PAIR> mymapvec(myfun.mymap.begin(), myfun.mymap.end());
@@ -50,11 +53,13 @@ int main() {
     if (length1 <= 10) {
         for (int i = 0; i != mymapvec.size(); ++i) {
             outfile << mymapvec[i].first << endl;
+            cout << mymapvec[i].first << endl;
         }
     }
     else {
         for (int i = 0; i < 10; ++i) {
             outfile << mymapvec[i].first << endl;
+            cout << mymapvec[i].first << endl;
         }
     }
     outfile.close();
