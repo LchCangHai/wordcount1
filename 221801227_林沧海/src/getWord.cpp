@@ -1,7 +1,7 @@
 #include "head.h"
 
 //获取一行中的单词及其个数存入map中
-void fun::getWord(string str, map<string, int> &mymap) {
+void fun::getWord(string str) {
     regex words_regex("[a-zA-Z]{4}[a-za-z0-9]*"); // 判断单词的正则表达式
 
     auto words_begin = sregex_iterator(
