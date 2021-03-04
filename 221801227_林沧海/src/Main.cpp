@@ -22,8 +22,6 @@ int main() {
     cin >> filename;
     //cin.clear();
     cin >> outFile;
-    cout << filename << endl;
-    cout << outFile << endl;
 
     if ((point = fopen(filename, "rb")) == NULL) {
         perror(filename);
