@@ -31,9 +31,9 @@ int main() {
     fclose(point);
 
     ofstream outfile(outFile);
-    string temp2 = "characters: " + to_string(charCnt) + "\n";
-    string temp3 = "words: " + to_string(wordCnt) + "\n";
-    string temp1 = "lines: " + to_string(lineCnt) + "\n";
+    string temp1 = "characters: " + to_string(charCnt) + "\n";
+    string temp2 = "words: " + to_string(wordCnt) + "\n";
+    string temp3 = "lines: " + to_string(lineCnt) + "\n";
 
     cout << "characters: " << charCnt << endl;
     cout << "words: " << wordCnt << endl;
