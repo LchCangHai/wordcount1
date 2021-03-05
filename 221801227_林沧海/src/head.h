@@ -56,7 +56,7 @@ public:
             str.end(),
             words_regex);
         auto words_end = sregex_iterator();
-
+                                                                                
         for (sregex_iterator k = words_begin; k != words_end; ++k) {
             smatch match = *k;
             string match_str = myToLower(match.str());//ªÒ»°µ•¥ 
@@ -68,7 +68,7 @@ public:
                 mymap.insert(value);
             }
             else {
-                mymap[match_str]++;
+                ++mymap[match_str];
             }
         }
 

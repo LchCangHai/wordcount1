@@ -28,12 +28,12 @@ int main() {
     // ºó10ÐÐ
     if (length1 <= 10) {
         for (int i = 0; i != mymapvec.size(); ++i) {
-            cout << mymapvec[i].first << mymapvec[i].second << endl;
+            cout << mymapvec[i].first << ":" << mymapvec[i].second << endl;
         }
     }
     else {
         for (int i = 0; i < 10; ++i) {
-            cout << mymapvec[i].first << mymapvec[i].second << endl;
+            cout << mymapvec[i].first << ":" << mymapvec[i].second << endl;
         }
     }
     return 0;
