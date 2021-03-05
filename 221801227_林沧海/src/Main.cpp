@@ -1,12 +1,5 @@
 #include "head.h"
-typedef pair<string, int> PAIR;
 
-// 对map中value值进行排序
-struct CmpByValue {
-    bool operator()(const PAIR& lhs, const PAIR& rhs) {
-        return rhs.second < lhs.second;
-    }
-};
 
 int main() {
     FILE* point;      //文件指针
@@ -38,12 +31,14 @@ int main() {
     fclose(point);
 
     ofstream outfile(outFile);
-    string temp1 = "行数为：" + to_string(lineCnt) + "\n";
-    string temp2 = "字符数为：" + to_string(charCnt) + "\n";
-    string temp3 = "单词数为：" + to_string(wordCnt) + "\n";
-    cout << "行数为：" << lineCnt << endl;
-    cout << "字符数为：" << charCnt << endl;
-    cout << "单词数为：" << wordCnt << endl;
+    string temp2 = "characters:" + to_string(charCnt) + "\n";
+    string temp3 = "words:" + to_string(wordCnt) + "\n";
+    string temp1 = "lines:" + to_string(lineCnt) + "\n";
+
+    cout << "characters:" << charCnt << endl;
+    cout << "words:" << wordCnt << endl;
+    cout << "lines:" << lineCnt << endl;
+
     // 前3行
     outfile << temp1 << temp2 << temp3;
     vector<PAIR> mymapvec(myfun.mymap.begin(), myfun.mymap.end());
@@ -52,14 +47,14 @@ int main() {
     // 后10行
     if (length1 <= 10) {
         for (int i = 0; i != mymapvec.size(); ++i) {
-            outfile << mymapvec[i].first << endl;
-            cout << mymapvec[i].first << endl;
+            outfile << mymapvec[i].first << ":" << mymapvec[i].second << endl;
+            cout << mymapvec[i].first << ":" << mymapvec[i].second << endl;
         }
     }
     else {
         for (int i = 0; i < 10; ++i) {
-            outfile << mymapvec[i].first << endl;
-            cout << mymapvec[i].first << endl;
+            outfile << mymapvec[i].first << ":" << mymapvec[i].second << endl;
+            cout << mymapvec[i].first << ":" << mymapvec[i].second << endl;
         }
     }
     outfile.close();

@@ -7,9 +7,24 @@
 #include <regex>
 using namespace std;
 
+typedef pair<string, int> PAIR;
+
+// 对map中value值进行排序
+struct CmpByValue {
+    bool operator()(const PAIR& lhs, const PAIR& rhs) {
+        return rhs.second < lhs.second;
+    }
+};
+// 对map中key值进行排序
+struct CmpByKeyLength {
+    bool operator()(const string& k1, const string& k2)const {
+        return k1.length() < k2.length();
+    }
+};
+
 class fun {
 public:
-    map<string, int> mymap;
+    map<string, int, CmpByKeyLength> mymap;
     string regexp = "[a-zA-Z]{4}[a-zA-Z0-9]*";
 
     //计算一行（一个字符串中）的单词数
