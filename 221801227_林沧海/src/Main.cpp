@@ -31,13 +31,13 @@ int main() {
     fclose(point);
 
     ofstream outfile(outFile);
-    string temp2 = "characters:" + to_string(charCnt) + "\n";
-    string temp3 = "words:" + to_string(wordCnt) + "\n";
-    string temp1 = "lines:" + to_string(lineCnt) + "\n";
+    string temp2 = "characters: " + to_string(charCnt) + "\n";
+    string temp3 = "words: " + to_string(wordCnt) + "\n";
+    string temp1 = "lines: " + to_string(lineCnt) + "\n";
 
-    cout << "characters:" << charCnt << endl;
-    cout << "words:" << wordCnt << endl;
-    cout << "lines:" << lineCnt << endl;
+    cout << "characters: " << charCnt << endl;
+    cout << "words: " << wordCnt << endl;
+    cout << "lines: " << lineCnt << endl;
 
     // 前3行
     outfile << temp1 << temp2 << temp3;
@@ -47,14 +47,14 @@ int main() {
     // 后10行
     if (length1 <= 10) {
         for (int i = 0; i != mymapvec.size(); ++i) {
-            outfile << mymapvec[i].first << ":" << mymapvec[i].second << endl;
-            cout << mymapvec[i].first << ":" << mymapvec[i].second << endl;
+            outfile << mymapvec[i].first << ": " << mymapvec[i].second << endl;
+            cout << mymapvec[i].first << ": " << mymapvec[i].second << endl;
         }
     }
     else {
         for (int i = 0; i < 10; ++i) {
-            outfile << mymapvec[i].first << ":" << mymapvec[i].second << endl;
-            cout << mymapvec[i].first << ":" << mymapvec[i].second << endl;
+            outfile << mymapvec[i].first << ": " << mymapvec[i].second << endl;
+            cout << mymapvec[i].first << ": " << mymapvec[i].second << endl;
         }
     }
     outfile.close();
