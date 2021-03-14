@@ -18,9 +18,9 @@ int main() {
     //myfun.showWord(); //输出所有单词及其出现次数
 
     // 前3行
-    cout << "characters: " << charCnt << endl;
-    cout << "words: " << wordCnt << endl;
-    cout << "lines: " << lineCnt << endl;
+    cout << "characters:" << charCnt << endl;
+    cout << "words:" << wordCnt << endl;
+    cout << "lines:" << lineCnt << endl;
     
     vector<PAIR> mymapvec(myfun.mymap.begin(), myfun.mymap.end());
     sort(mymapvec.begin(), mymapvec.end(), CmpByValue());
@@ -28,12 +28,12 @@ int main() {
     // 后10行
     if (length1 <= 10) {
         for (int i = 0; i != mymapvec.size(); ++i) {
-            cout << mymapvec[i].first << ": " << mymapvec[i].second << endl;
+            cout << mymapvec[i].first << ":" << mymapvec[i].second << endl;
         }
     }
     else {
         for (int i = 0; i < 10; ++i) {
-            cout << mymapvec[i].first << ": " << mymapvec[i].second << endl;
+            cout << mymapvec[i].first << ":" << mymapvec[i].second << endl;
         }
     }
     return 0;
